@@ -1,15 +1,44 @@
 {{ partial "header.html" . }}
+
 <section class="main">
     <div class="container">
         <div class="content">
-            <div class="page-heading">Blog</div>
+            <div class="page-heading">Latest Post</div>
             <ul>
-                {{ range .Data.Pages.ByPublishDate }}
-                {{ partial "li.html" . }}
-                {{ end }}
+{{ range first 1 .Data.Pages }}
+<div class="post-item">
+  <div class="summary">{{ .Date.Format .Site.Params.dateform }}
+    <h4><span style="font-weight: bold"><a href="{{ .RelPermalink }}">{{ .Title }}</a></span></h4>
+        {{ .Summary }}
+        {{ if .Truncated }}
+        <div class="read-more-link">
+        <a href="{{ .RelPermalink }}">...Read More</a>
+        </div>
+    </div>
+    {{ end }}
+  </div>
+{{ end }}
             </ul>
         </div>
     </div>
 </section>
-{{ partial "footer.html" . }}
+<section class="main">
+    <div class="space">
+    </div>
+</section>
 
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">All Posts</div>
+            <ul>
+            {{ range .Data.Pages.ByPublishDate }}
+                {{ if eq .Section "blog" }}
+                    {{ partial "li.html" . }}
+                {{ end }}
+            {{ end }}
+            </ul>
+        </div>
+    </div>
+</section> 
+{{ partial "footer.html" . }}

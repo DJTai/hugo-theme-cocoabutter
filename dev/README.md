@@ -7,9 +7,16 @@ The theme should continue to work even if this directory is removed.
 To make CSS changes:
 
 ```sh
-$ npm install -g less          # install less compiler
-$ vim dev/less/main.less       # make changes
-$ make css                     # compile
+# Install the less compiler
+$ npm install -g lessc
+
+# Make changes to .less files...
+
+# Compile using make:
+#   dev/reset.less -> static/css/reset.css
+#   dev/pygments.less -> static/css/pygments.css
+#   dev/main.less -> static/css/main.css
+$ make css
 ```
 
 Commit both `dev/less` and `static/css`.
@@ -30,6 +37,5 @@ less/
 ## Versions in use
 
 ```
-$ lessc
 lessc 2.7.1 (Less Compiler) [JavaScript]
 ```

@@ -5,8 +5,8 @@ contentdir          = "content"
 languageCode        = "en-US"
 layoutdir           = "layouts"
 publishdir          = "public"
-author              = "Arthur Dent"
-title               = "Arthur Dent"
+author              = "Cocoabutter Author"
+title               = "Cocoabutter Title"
 pygmentsuseclasses  = true
 disqusshortname     = "cocoaexamplesite" # Comment out to disable Disqus.
 pluralizelisttitles = false
@@ -17,7 +17,7 @@ fixed = ":title/"
 blog  = "blog/:slug/"
 
 [params]
-author       = "Arthur Dent"
+author       = "Cocoabutter Coffee"
 cachebuster  = true # add the current unix timestamp in query string for cache busting css assets
 dateform     = "Jan 2, 2006"
 dateformfull = "Mon Jan 2 2006 15:04:05 MST"
@@ -30,7 +30,6 @@ lang         = "en"
 linkedin     = "//linkedin.com/in/you"
 twitter      = "//twitter.com/you"
 selfIntro    = "" # appears in the site header when set to a non-empty string
-forcehttps   = true # use a script to detect whether visitors should be redirected to https
 
 # gravatar             = ""                # do not use in the same time as avatar
 avatar                 = "img/profile.png" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)

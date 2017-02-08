@@ -1,34 +1,23 @@
-# Cocoa
+# Cocoabutter theme for Hugo
 
-A consistent and responsive [Hugo](http://gohugo.io) [theme](https://github.com/spf13/hugoThemes/) with clean typography. The primary typefaces are Open Sans, Raleway, and Ubuntu Mono.
+A fork of the [Cocoa theme](https://github.com/nishanths/cocoa-hugo-theme/) with:
 
-[__Demo__](http://themes.gohugo.io/theme/cocoa/)
+* A static home page created with "index.md"
+* A "Latest Post" summary on the blog page
 
-#### Features
+TODO:
+* Set accent color to be configurable via "config.toml"
+* Make links in "header.html" partial update with new top level pages automatically
+* Demo site
 
-```
-* Responsive
-* Suited for blogging and personal webpages
-* Disqus support
-* Built-in 404 page
-* Syntax highlighting (by @andy4thehuynh)
-* Gravatar/static profile image (by @remeh)
-* RSS feed and icon (by @mvrilo)
-* Optimized SVG icons (by @robinst)
-* Cache busting
-* Google Analytics
-```
-
-Most features are optional and can be individually enabled/disabled in your [`config.toml`](https://github.com/nishanths/cocoa-hugo-theme/blob/master/exampleSite/config.toml).
+See README for Cocoa theme [here](https://github.com/nishanths/cocoa-hugo-theme/blob/master/README.md).
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/nishanths/cocoa-hugo-theme/master/images/tn.png" width="800">
-
-<img src="http://i.imgur.com/jdstF9j.png" width="800">
-
-<img src="https://i.imgur.com/5jI8kEU.png" width="400">
-
+![Index](/exampleSite/cocoabutter-1.jpg)
+![Blog](/exampleSite/cocoabutter-2.jpg)
+![Post page](/exampleSite/cocoabutter-3.jpg)
+![Contact page](/exampleSite/cocoabutter-4.jpg)
 
 ## Table of Contents
 
@@ -40,24 +29,41 @@ Most features are optional and can be individually enabled/disabled in your [`co
 
 ## Quick start 
 
-From the root of your Hugo site, clone the theme into `themes/cocoa` by running:
+From the root of your Hugo site, clone the theme into `themes/cocoabutter` by running:
 
 ```sh
-# Clone theme into the themes/cocoa directory
-$ git clone https://github.com/nishanths/cocoa-hugo-theme.git themes/cocoa
+# Clone theme into the themes/cocoabutter directory
+$ git clone https://github.com/vickylaixy/cocoabutter-hugo-theme.git themes/cocoabutter
+
+# Serve your site and visit localhost:1313 in your browser
+$ hugo -t cocoabutter --watch serve
 
 # Generate site files into the public directory
-$ hugo -t cocoa
-
-# Or, serve your site and visit localhost:1313 in your browser
-$ hugo -t cocoa --watch serve
+$ hugo -t cocoabutter
 ```
 
 ## Usage
 
 #### config.toml
 
-Please see the sample [`config.toml`](https://github.com/nishanths/cocoa-hugo-theme/blob/master/exampleSite/config.toml). Note that if you already use cocoa but have updated to Hugo 0.18, you must lowercase every params of your existing `config.toml` (like in the sample).
+Please see the sample [`config.toml`](https://github.com/vickylaixy/cocoabutter-hugo-theme/blob/master/exampleSite/config.toml)
+
+#### Creating the home page (index.md)
+
+Create your index page in the `content` directory by running:
+```
+hugo new index.md
+```
+
+In the front matter of the file, include `type = "index"` like so:
+```
++++
+date = "2017-02-08T13:28:26+07:00"
+draft = false
+title = "Home"
+type = "index"
++++
+```
 
 #### Creating posts
 
@@ -75,18 +81,6 @@ Fixed pages such as an About page should preferably go under `content/fixed` or 
 ````
 hugo new fixed/about.md
 ````
-
-## Development
-
-This theme is built and improved upon by open source [contributions](https://github.com/nishanths/cocoa-hugo-theme/graphs/contributors). Pull requests, bug fixes, and new features are welcome! 
-
-If you're contributing CSS changes, please see the README at [`dev/`](dev).
-
-
-## Changelog
-
-See [Changelog](https://github.com/nishanths/cocoa-hugo-theme/wiki/Changelog) in the wiki.
-
 
 ## License
 

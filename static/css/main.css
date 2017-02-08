@@ -5,7 +5,7 @@
   color: #666 !important;
 }
 .accent {
-  color: #428bca !important;
+  color: #000 !important;
 }
 @media (min-width: 550px) {
   .small-screens-only {
@@ -176,10 +176,11 @@ section.header .content {
 section.header .avatar {
   border-radius: 50%;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-  max-width: 50px;
+  max-width: 130px;
+  margin-bottom: 20px;
 }
 section.header .name {
-  font-size: 18px;
+  font-size: 28px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
   font-weight: 700;
@@ -218,17 +219,17 @@ section.header nav ul {
   display: -ms-inline-flex;
   display: inline-flex;
 }
-section.header nav ul li {
+section.header nav ul a {
   margin-left: 6px;
   margin-right: 6px;
 }
-section.header nav ul li:first-child {
+section.header nav ul a:first-child {
   margin-left: 0;
 }
-section.header nav ul li:last-child {
+section.header nav ul a:last-child {
   margin-right: 0;
 }
-section.header nav ul a {
+section.header nav ul li {
   color: #555;
   font-weight: 500;
   -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
@@ -236,7 +237,7 @@ section.header nav ul a {
   -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
   -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
-section.header nav ul a:hover {
+section.header nav ul li:hover {
   color: #111;
 }
 @media (min-width: 600px) {
@@ -265,10 +266,10 @@ section.header nav ul a:hover {
   section.header nav ul {
     text-align: left;
   }
-  section.header nav ul a {
+  section.header nav ul li {
     color: #666;
   }
-  section.header nav ul a:hover {
+  section.header nav ul li:hover {
     color: #333;
   }
 }
@@ -374,7 +375,7 @@ section.main .content .title-container .initials a:hover {
   color: #333;
 }
 section.main .content .page-heading {
-  font-size: 18px;
+  font-size: 20px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
   font-weight: 700;
@@ -484,7 +485,25 @@ section.main .container .content .post-item {
   -ms-align-items: center;
   align-items: center;
   display: list-item;
-  list-style: disc inside;
+  font-size: 0.9rem;
+  list-style-type: disc;
+  margin-left: 1.5em;
+  list-style-position: outside;
+  padding-left: 0em;
+}
+section.main .container .content .summary-item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: list-item;
+  list-style: none;
+  font-size: 0.9rem;
 }
 section.main .container .content .post-item .meta {
   font-size: 14px;
@@ -493,6 +512,14 @@ section.main .container .content .post-item .meta {
   min-width: 100px;
   text-align: right;
   margin-right: 16px;
+}
+section.main .container .content .post-item .summary {
+  font-size: 14px;
+  color: #000;
+  display: none;
+  min-width: 100px;
+  text-align: left;
+  margin-left: 10px;
 }
 section {
   padding: 0 16px;
@@ -515,7 +542,7 @@ section.main {
   }
   section.header {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
   }
   section.icons {
     padding-top: 60px;
@@ -525,27 +552,46 @@ section.main {
     padding-top: 0;
     padding-bottom: 0;
   }
+  section.main .space {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
   section.main .container .content .post-item {
+    display: flex;
+    list-style: none;
+  }
+  section.main .container .content .summary-item {
     display: flex;
     list-style: none;
   }
   section.main .container .content .post-item .meta {
     display: block;
   }
+  section.main .container .content .post-item .summary {
+    display: block;
+  }
   section.main.post {
     padding-top: 60px;
     padding-bottom: 60px;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
   }
 }
 a {
-  color: #428bca;
+  color: #E65100;
   -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
   -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
   -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
   -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
 a:hover {
-  color: #2a6496;
+  color: #333;
 }
 img {
   max-width: 100%;
@@ -568,7 +614,7 @@ section.main .content .markdown h3,
 section.main .content .markdown h4,
 section.main .content .markdown h5,
 section.main .content .markdown h6 {
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
   font-weight: 700;
@@ -584,7 +630,7 @@ section.main .content .markdown h1 {
   margin-bottom: 2rem;
 }
 section.main .content .markdown h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 1.5rem;
 }
 section.main .content .markdown h3 {
@@ -594,20 +640,22 @@ section.main .content .markdown h3 {
 section.main .content .markdown h4,
 section.main .content .markdown h5,
 section.main .content .markdown h6 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-bottom: 1rem;
   letter-spacing: none;
 }
 section.main .content .markdown code,
 section.main .content .markdown pre {
   font-family: 'Ubuntu Mono', 'Menlo', monospace;
-  font-size: 1rem;
+  font-size: 0.9rem;
   background-color: #f7f7f7;
 }
 section.main .content .markdown code {
   /* enclosed by single backtick (`) */
   padding: .15em .5em;
-  border-radius: 2px;
+  border-radius: .3em;
+  background: #fff;
+  border: 1px solid #ddd;
 }
 section.main .content .markdown pre {
   /* Hugo specific: consider using the 'highlight' shortcode */
@@ -620,11 +668,15 @@ section.main .content .markdown pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
+  border-radius: .3em;
+  background: #fff;
+  border: 1px solid #ddd;
 }
 section.main .content .markdown pre code {
   /* enclosed by 3 backticks (```) */
   padding: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  border: 0;
 }
 section.main .content .markdown a code {
   color: #428bca !important;
@@ -634,7 +686,7 @@ section.main .content .markdown a code:hover {
 }
 section.main .content .markdown p {
   /* Invoked by line break */
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-top: 0;
   margin-bottom: 1em;
 }
@@ -642,6 +694,7 @@ section.main .content .markdown ul,
 section.main .content .markdown ol,
 section.main .content .markdown dl {
   margin-top: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 2rem;
 }
 section.main .content .markdown dt {
@@ -655,7 +708,9 @@ section.main .content .markdown ul {
 }
 section.main .content .markdown li {
   list-style-type: disc;
-  list-style-position: inside;
+  margin-left: 1.5em;
+  list-style-position: outside;
+  padding-left: 1em;
 }
 section.main .content .markdown em {
   font-style: italic;
@@ -671,7 +726,7 @@ section.main .content .markdown hr {
   border-top: 1px solid #999999;
 }
 section.main .content .markdown abbr {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: bold;
   color: #666666;
   text-transform: uppercase;
