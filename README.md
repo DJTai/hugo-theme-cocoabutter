@@ -15,9 +15,13 @@ See README for Cocoa theme [here](https://github.com/nishanths/cocoa-hugo-theme/
 ## Screenshots
 
 ![Index](/exampleSite/cocoabutter-1.jpg)
+***
 ![Blog](/exampleSite/cocoabutter-2.jpg)
+***
 ![Post page](/exampleSite/cocoabutter-3.jpg)
+***
 ![Contact page](/exampleSite/cocoabutter-4.jpg)
+***
 
 ## Table of Contents
 
