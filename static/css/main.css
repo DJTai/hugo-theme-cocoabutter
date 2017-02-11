@@ -491,7 +491,7 @@ section.main .container .content .post-item {
   list-style-position: outside;
   padding-left: 0em;
 }
-section.main .container .content .summary-item {
+section.main .container .content .summary {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -501,7 +501,7 @@ section.main .container .content .summary-item {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
-  display: list-item;
+  display: block;
   list-style: none;
   font-size: 0.9rem;
 }
@@ -513,13 +513,14 @@ section.main .container .content .post-item .meta {
   text-align: right;
   margin-right: 16px;
 }
-section.main .container .content .post-item .summary {
+section.main .container .content .summary {
   font-size: 14px;
   color: #000;
-  display: none;
+  display: block;
+  list-style: none;
   min-width: 100px;
   text-align: left;
-  margin-left: 10px;
+  margin-left: 2em;
 }
 section {
   padding: 0 16px;
@@ -534,7 +535,7 @@ section.icons {
 }
 section.main {
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 0;
 }
 @media (min-width: 600px) {
   .container {
@@ -560,16 +561,14 @@ section.main {
     display: flex;
     list-style: none;
   }
-  section.main .container .content .summary-item {
-    display: flex;
-    list-style: none;
-  }
   section.main .container .content .post-item .meta {
     display: block;
+    list-style: none;
   }
-  section.main .container .content .post-item .summary {
+  section.main .container .content .summary {
     display: block;
-  }
+    list-style: none;
+  }  
   section.main.post {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -705,6 +704,7 @@ section.main .content .markdown dd {
 }
 section.main .content .markdown ul {
   margin-bottom: 1.25rem;
+  list-style: none;
 }
 section.main .content .markdown li {
   list-style-type: disc;
