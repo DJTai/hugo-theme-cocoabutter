@@ -37,7 +37,7 @@ From the root of your Hugo site, clone the theme into `themes/cocoabutter` by ru
 
 ```sh
 # Clone theme into the themes/cocoabutter directory
-$ git clone https://github.com/vickylaixy/cocoabutter-hugo-theme.git themes/cocoabutter
+$ git clone https://github.com/vickylaiio/cocoabutter-hugo-theme.git themes/cocoabutter
 
 # Serve your site and visit localhost:1313 in your browser
 $ hugo -t cocoabutter --watch serve
@@ -50,7 +50,7 @@ $ hugo -t cocoabutter
 
 #### config.toml
 
-Please see the sample [`config.toml`](https://github.com/vickylaixy/cocoabutter-hugo-theme/blob/master/exampleSite/config.toml)
+Please see the sample [`config.toml`](https://github.com/vickylaiio/cocoabutter-hugo-theme/blob/master/exampleSite/config.toml)
 
 #### Creating the home page (index.md)
 
